@@ -8,6 +8,9 @@
     "@repo/typescript-config": "workspace:*",
     "tailwindcss": "^3.3.5"
   },
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  },
   "author": "Simon Colman",
   "license": "ISC"
 }

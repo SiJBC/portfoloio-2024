@@ -1,10 +1,26 @@
-import { Button } from "@repo/ui/button"
+import { CardComponents } from "@repo/ui/components"
 
 export default function Home() {
+  const {
+    Card,
+    CardContent,
+    CardHeader,
+    CardDescription,
+    CardTitle,
+    CardFooter,
+  } = CardComponents
   return (
-    <div className="flex flex-col font-bold text-4xl bg-white text-blue-900">
-      Beep
-      <Button appName="hello">Hello</Button>
-    </div>
+    <Card>
+      <CardHeader>
+        <CardTitle>Card Title</CardTitle>
+        <CardDescription>Card Description</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>Card Content</p>
+      </CardContent>
+      <CardFooter>
+        <p>Card Footer</p>
+      </CardFooter>
+    </Card>
   )
 }

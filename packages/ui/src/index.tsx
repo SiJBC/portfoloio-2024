@@ -1,5 +1,5 @@
-import { Button } from './button'
-import { Card} from './card'
-import { Code } from './code'
+import { Button } from "./components/button"
+import * as CardComponents from "./components/card"
+import { Code } from "./components/code"
 
-export { Button, Card, Code }
+export { Button, CardComponents, Code }
