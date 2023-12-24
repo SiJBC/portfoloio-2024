@@ -1,0 +1,13 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./tailwind.config.ts"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "tailwindcss": "^3.3.5"
+  },
+  "author": "Simon Colman",
+  "license": "ISC"
+}
