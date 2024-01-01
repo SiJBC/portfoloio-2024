@@ -1,5 +1,5 @@
 import React from "react"
-import { CardComponents } from "@repo/ui/components"
+import { Components } from "@repo/ui/components"
 import { cn } from "@/lib/utils"
 
 function ColourCards({
@@ -9,6 +9,7 @@ function ColourCards({
   colourName?: string
   colourHexCode?: string
 }) {
+  const { CardComponents } = Components
   const { Card, CardContent, CardFooter } = CardComponents
   return (
     <div>
@@ -19,7 +20,7 @@ function ColourCards({
             colourName
           )}
         >
-          <span className="mix-blend-difference text-theme-dark-gray text-wrap">
+          <span className="mix-blend-difference text-theme-light-gray text-wrap">
             {colourName
               .slice(2)
               .split("-")

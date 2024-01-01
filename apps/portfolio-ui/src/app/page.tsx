@@ -1,6 +1,7 @@
-import { CardComponents } from "@repo/ui/components"
+import { Components } from "@repo/ui/components"
 
 export default function Home() {
+  const { CardComponents } = Components
   const {
     Card,
     CardContent,

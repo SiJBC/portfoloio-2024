@@ -12,6 +12,22 @@ const config: Omit<Config, "content"> = {
       },
     },
     extend: {
+      backgroundImage: {
+        "dark-gradient": "linear-gradient(180deg, #1A1A1A 0%, #131313 100%)",
+        "light-gradient": `linear-gradient(
+          to right, 
+          #999999,   
+          #555555,   
+          #999999    
+        )`,
+      },
+      boxShadow: {
+        dark: "0px 7px 4px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(255, 255, 255, 0.08) inset, 0px 1px 2px 0px rgba(255, 255, 255, 0.02) inset",
+      },
+      fontFamily: {
+        sans: ["Inter", ...fontFamily.sans],
+        nanum: ["Nanum Pen", "sans-serif"],
+      },
       colors: {
         "theme-black": "#0D0D0D",
         "theme-white": "#FFFFFF",
@@ -69,9 +85,6 @@ const config: Omit<Config, "content"> = {
         lg: `var(--radius)`,
         md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {

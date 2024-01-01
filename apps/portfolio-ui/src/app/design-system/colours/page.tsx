@@ -1,7 +1,7 @@
 import React from "react"
 import ColourCard from "@/app/components/ColourCards"
 
-const colours = [
+export const colours = [
   { "bg-theme-black": "#0D0D0D" },
   { "bg-theme-white": "#FFFFFF" },
   { "bg-theme-onyx": "#181818" },
@@ -20,23 +20,30 @@ const colours = [
   { "bg-theme-light-card-border": "#EBEBEB" },
   { "bg-theme-card-bg": "#F6F6F6" },
   { "bg-theme-card-bg-hover": "#EDEDED" },
-]
+] as const
 
 function Colours() {
   return (
-    <div className="flex flex-wrap gap-4 justify-center">
-      {colours.map((card) => {
-        const colourName = Object.keys(card)[0]
-        const colourHexCode = Object.values(card)[0]
-        return (
-          <ColourCard
-            key={colourName}
-            colourName={colourName}
-            colourHexCode={colourHexCode}
-          />
-        )
-      })}
-    </div>
+    <>
+      <div className="flex flex-wrap gap-4 justify-center ">
+        {colours.map((card) => {
+          const colourName = Object.keys(card)[0]
+          const colourHexCode = Object.values(card)[0]
+          return (
+            <ColourCard
+              key={colourName}
+              colourName={colourName}
+              colourHexCode={colourHexCode}
+            />
+          )
+        })}
+      </div>
+      <div className="w-screen flex fle-col justify-center mt-12">
+        <div className="m-auto text-center">
+          <ColourCard colourName="bg-dark-gradient" />
+        </div>
+      </div>
+    </>
   )
 }
 
