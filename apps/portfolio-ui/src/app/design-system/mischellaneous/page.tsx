@@ -1,6 +1,5 @@
 import React from "react"
 import { Icons, Components } from "@repo/ui/components"
-import { colours } from "../colours/page"
 
 function page() {
   const IconArray = Object.values(Icons)

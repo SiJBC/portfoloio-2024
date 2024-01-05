@@ -1,5 +1,3 @@
-"use client"
-
 import React, { ButtonHTMLAttributes, ReactNode } from "react"
 import { cva, VariantProps } from "class-variance-authority"
 import * as Icons from "../icons"
@@ -23,7 +21,7 @@ const button = cva(
         modifier: "dark",
         variants: "primary",
         className:
-          "bg-light-gradient shadow-dark h-14 px-8 py-4 text-theme-white",
+          "bg-light-gradient shadow-dark h-14 px-8 py-4 text-theme-white leading-6",
       },
       {
         modifier: "dark",
@@ -82,7 +80,6 @@ export const Button: React.FC<ButtonProps> = ({
   const IconRightComponent = iconRight ? Icons[iconRight] : null
   const IconLeftComponent = iconLeft ? Icons[iconLeft] : null
   const stroke = modifier === "light" && variants === "text" ? "grey" : "white"
-  console.log(modifier, variants, stroke)
   return (
     <button {...rest} className={button({ variants, modifier })}>
       {IconLeftComponent && <IconLeftComponent stroke={stroke} />}
